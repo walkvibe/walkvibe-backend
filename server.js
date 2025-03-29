@@ -16,13 +16,6 @@ app.use(
   })
 );
 
-app.use(bodyParser.json());
-
-// Default route for testing
-app.get("/", (req, res) => {
-  res.send("Backend is running!");
-});
-
 app.use("/api", emailRoute);
 
 const PORT = process.env.PORT || 5000;
